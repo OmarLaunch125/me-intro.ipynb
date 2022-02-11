@@ -1,0 +1,224 @@
+Variables
+Las variables se definen:
+
+tipo String /Implícito
+valor
+nombre 'msg'
+print('Hola Explorers!')
+Hola Explorers!
+# Hola con una variable
+msg = 'Hola Explorers!'
+print(msg)
+Hola Explorers!
+Programando Hotcakes
+titulo = 'Programando hotcakes'
+
+huevo = 10
+leche = 20
+mantequilla = 5
+harina = 5
+cditaVainilla = 8
+
+# Asginamos los espacios en la memoria del programa para nuestros ingredientes
+print(leche)
+25
+print('Cantidad de leche: '+str(leche)) 
+Cantidad de leche: 20
+print('Cantidad de leche: '+str(leche) + ' Cantidad de huevo: '+str(huevo)) 
+Cantidad de leche: 20 Cantidad de huevo: 10
+print('Cantidad de leche: '+str(leche) + '\nCantidad de huevo: '+str(huevo)) 
+Cantidad de leche: 20
+Cantidad de huevo: 10
+#Mezclamos los ingredientes
+
+mezcla = huevo + leche + harina + mantequilla + cditaVainilla
+print(mezcla)
+
+# Reglas - Condiciones
+
+# huevo = 10
+# leche = 20
+# mantequilla = 5
+# harina = 5
+# cditaVainilla = 8
+
+if (huevo == 10):
+    print('La cantidad de huevo es correcta')
+elif (leche == 20):
+    print('La cantidad de leche es correcta')
+elif (mantequilla == 5):
+    print('La cantidad de mantequilla es correcta')
+else:
+    print('Revisa tus ingredientes')
+Revisa tus ingredientes
+# Repartirlos
+
+porcion = mezcla / 3
+print('La mezcla alcanzo para '+str(porcion)+ ' hotcakes por persona')
+La mezcla alcanzo para 2.52 hotcakes por persona
+Cadenas
+Serie de caracteres, entre comillas dobles "" o simples ''
+
+#String
+name = 'Ada Lovelace'
+print(name.title())
+Ada Lovelace
+print(name.upper())
+#Mayusculas
+ADA LOVELACE
+print(name.lower())
+#Minusculas
+ada lovelace
+name = name.lower()
+print(name.islower())
+print(name)
+True
+ada lovelace
+first_name = 'ada'
+last_name = '                lovelace   '
+print(first_name + " " +last_name)
+ada                 lovelace   
+#Quitar todos los espacios
+last_name = last_name.strip()
+print(last_name)
+lovelace
+last_name = '                lovelace   '
+last_name = last_name.lstrip()
+print(last_name)
+
+#elimina espacios al inicio
+lovelace   
+last_name = last_name.rstrip()
+print(last_name)
+lovelace
+# Usando variables en cadenas
+
+nombre = 'Omar'
+apellido = 'Gonzalez'
+nombre_completo = f'{nombre} {apellido}'
+print(nombre_completo)
+Omar Gonzalez
+Listas
+Almacena una serie de elementos
+
+ingredientes = ['huevo', 'harina', 'leche']
+#Primer elemento
+ingredientes[0]
+'huevo'
+#Ultimo elemento
+ingredientes[-1]
+'leche'
+# Append()
+ingredientes.append('mantequilla')
+print(ingredientes)
+['huevo', 'harina', 'leche', 'mantequilla']
+# Insert
+ingredientes.insert(2,'vainilla')
+print(ingredientes)
+['huevo', 'harina', 'vainilla', 'vainilla', 'leche', 'mantequilla']
+# Pop
+ingredientes.pop(3)
+print(ingredientes)
+['huevo', 'harina', 'vainilla', 'leche', 'mantequilla']
+# Remove
+ingredientes.remove('harina')
+print(ingredientes)
+['huevo', 'vainilla', 'leche', 'mantequilla']
+# Sort A-Z
+ingredientes.sort()
+print(ingredientes)
+['huevo', 'leche', 'mantequilla', 'vainilla']
+# Reverse Z-A
+ingredientes.reverse()
+print(ingredientes)
+['vainilla', 'mantequilla', 'leche', 'huevo']
+# Longitud
+len(ingredientes)
+4
+print(ingredientes[-1])
+huevo
+# Slicing
+primeros_dos = ingredientes[:2]
+print(primeros_dos)
+['vainilla', 'mantequilla']
+#Copiamos una lista
+copy_list = ingredientes[:]
+print(copy_list)
+['vainilla', 'mantequilla', 'leche', 'huevo']
+Tuplas
+Las tuplas son similares a las listas, pero los elementos de una tupla no se pueden modificar.
+
+dimensiones = (1080,720)
+print(dimensiones[0])
+print(dimensiones[1])
+1080
+720
+dimensiones[1] = 1080
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-47-1b601d707074> in <module>
+----> 1 dimensiones[1] = 1080
+
+TypeError: 'tuple' object does not support item assignment
+print('Dimensiones originales')
+for dim in dimensiones:
+    print(dim)
+Dimensiones originales
+1080
+720
+dimensiones = (1080,1080)
+print(dimensiones)
+(1080, 1080)
+for d in dimensiones:
+    print(d)
+1080
+1080
+## Cupcake decoración
+
+el_cliente_quiere = ['crema de chocolate', 'chispas', 'relleno de crema', 'nueces']
+
+for extra in el_cliente_quiere:
+    print(f'Añadiendo ingredientes a la orden: {extra}')
+
+print('\n Tu cupcake está listo')
+Añadiendo ingredientes a la orden: crema de chocolate
+Añadiendo ingredientes a la orden: chispas
+Añadiendo ingredientes a la orden: relleno de crema
+Añadiendo ingredientes a la orden: nueces
+
+ Tu cupcake está listo
+# No hay un ingrediente disponible 
+
+el_cliente_quiere = ['crema de chocolate', 'chispas', 'relleno de crema', 'nueces']
+
+for extra in el_cliente_quiere:
+    if extra == 'nueces':
+        print('Lo sentimos, no tenemos nueces, puedes agregar almendras :)')
+    else:
+        print(f'Añadiendo ingredientes a la orden: {extra}')
+print('\n Tu cupcake está listo')
+Añadiendo ingredientes a la orden: crema de chocolate
+Añadiendo ingredientes a la orden: chispas
+Añadiendo ingredientes a la orden: relleno de crema
+Lo sentimos, no tenemos nueces, puedes agregar almendras :)
+
+ Tu cupcake está listo
+# ¿Cómo podemos saber que ingredientes si están disponibles?
+
+extras_disponibles = ['crema de chocolate', 'almendras', 'perlas', 'chispas', 'relleno de crema', 'ralladura de limon', 'canela']
+
+el_cliente_quiere = ['crema de chocolate', 'chispas', 'relleno de crema', 'nueces']
+
+for extra in el_cliente_quiere:
+    if extra in extras_disponibles:
+        print(f'Añadiendo {extra}.')
+    else: 
+        print(f'Lo sentimos, no tenemos {extra}')
+
+print('\nTu cupcake está listo')
+Añadiendo crema de chocolate.
+Añadiendo chispas.
+Añadiendo relleno de crema.
+Lo sentimos, no tenemos nueces
+
+Tu cupcake está listo
